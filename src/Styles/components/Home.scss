@@ -7,21 +7,53 @@
   $font-color-2: rgb(117, 0, 0);
   $font-color-3: rgb(161, 14, 14);
   $font-color-4: rgb(195, 19, 19);
+  $font-color-5: rgba(12, 12, 12, 0.797);
+  
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 *{
   box-sizing: border-box;
   font-size: 15px;
+  font-family: $font-1;
 }
+
 header{
-    font-family: $font-1;
+   
     background-color: $font-color-1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   @include verticalCenter;
     height: 100px;
     position:fixed;
     width:100%;
+    border-bottom: 1px solid #ddd; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
 
+}
+main{
+  position: relative;
+  top:150px;
+  width: 100%;
+  @include verticalCenter;
+  flex-flow: column;
+}
+main div{
+  @include verticalCenter;
+  flex-flow: column;
+  padding-top: 50px;
+}
+main h1{
+  font-size: 70px;
+  
+  color: $font-color-5;
+  padding: 30px;
+}
+main p {
+  font-size: 25px;
+ color: $font-color-5;
 }
 .LeftLink{
   width:100%;
@@ -46,6 +78,7 @@ header{
   text-decoration: none;
   color:$font-color-2;
   padding-bottom: 5px;
+  user-select: none; 
 }
 .navLinkage.active  {
  color: $font-color-3;
@@ -92,15 +125,17 @@ header{
   border-radius: 100%;
   padding: 0;
 }
-.DrapLogo{
+.DrapLogo, .Logo{
   border-radius: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;    
   -ms-user-select: none;     
   user-select: none; 
   pointer-events: none; 
-  
-  
+  -webkit-user-drag: none; 
+}
+.Logo{
+  margin:10px;
 }
 .LanguageButtonContainer {
   position: relative;
@@ -125,6 +160,7 @@ header{
   padding:5px;
  
 }
+
 
 
 

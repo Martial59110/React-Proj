@@ -2,14 +2,16 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import ButtonTranslate from './ButtonTranslate';
 import { useTranslation } from 'react-i18next'; 
-import Logo from '../assets/img/logo.png'
+import LogoEn from '../assets/img/logo-en.png';
+import LogoFr from '../assets/img/logo.png';
 
 function Header() {
-    const { t } = useTranslation(); 
+    const { t, i18n } = useTranslation(); 
+    const logoSrc = i18n.language === 'en' ? LogoEn : LogoFr;
     return (
         <div>
             <header>
-                 <img className='Logo' src={Logo} alt="Getisphere" width="250px" />
+                 <img className='Logo' src={logoSrc} alt="Getisphere" width="250px" />
                 <ul className='LeftLink'>
                     <li>
                         <NavLink to="/" className="navLinkage navAfter">
