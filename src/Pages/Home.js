@@ -3,6 +3,7 @@ import "../Styles/components/Home.scss";
 import Header from "../Components/Header";
 import imgHome1 from "../assets/img/imgHome1.jpg"
 import { useTranslation } from 'react-i18next'; 
+import Sphere from "../Components/ThreeSphere";
 
 
 function Home()
@@ -11,7 +12,10 @@ function Home()
     return (
         <div>
             <Header />
-                    <main><div> <h1>{t('360')}</h1><p>{t('slogText')}</p></div></main>
+                    <main><div className="M1"> <h1>{t('360')}</h1><p>{t('slogText')}</p></div>
+                    <Sphere /> 
+                    </main>
+            
         </div>
     )
 }
