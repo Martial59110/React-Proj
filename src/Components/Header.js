@@ -11,17 +11,17 @@ function Header() {
                  <h1>GestiSphere</h1>
                 <ul className='LeftLink'>
                     <li>
-                        <NavLink to="/" className="navLinkage">
+                        <NavLink to="/" className="navLinkage navAfter">
                         {t('accueil')}
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about" className="navLinkage">
+                        <NavLink to="/about" className="navLinkage navAfter">
                         {t('propos')}
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact" className="navLinkage">
+                        <NavLink to="/contact" className="navLinkage navAfter">
                             Contact
                         </NavLink>
                     </li>
